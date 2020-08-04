@@ -3,6 +3,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import EmployeeContainer from './employees/EmployeeContainer';
 import EmployerContainer from './employers/EmployerContainer';
 import JobContainer from './jobs/JobContainer';
+import LoginContainer from './login/LoginContainer';
+import SignUpContainer from './login/SignUpContainer';
 import JobCreatingFormContainer from './jobs/JobCreatingFormContainer';
 import AboutContainer from './employees/AboutContainer';
 import HowItWorksContainer from './employees/HowItWorksContainer';
@@ -35,6 +37,12 @@ export default function MainContainer() {
             </Route>
             <Route exact path="/employees/about">
               <AboutContainer/>
+            </Route>
+            <Route exact path="/employees/login">
+              <LoginContainer/>
+            </Route>
+            <Route exact path="/employees/sign-up">
+              <SignUpContainer/>
             </Route>
             <Route exact path="/employers">
               <EmployerContainer/>

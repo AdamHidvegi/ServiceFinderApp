@@ -18,8 +18,8 @@ export default function EmployeeNavBar() {
           <Nav.Link href="/employees/about">About</Nav.Link>
           <div className="justify-content-end">
             <Button href="/employers" variant="secondary mx-1" data-tip data-for="switchToEmployer" type="button">I'd like to post a job!</Button>
-            <Button variant="secondary mx-1" type="button">Sign up</Button>
-            <Button variant="secondary mx-1" type="button">Log in <ArrowRightIcon size={16} /></Button>
+            <Button href="/employees/sign-up" variant="secondary mx-1" type="button">Sign up</Button>
+            <Button href="/employees/login" variant="secondary mx-1" type="button">Log in <ArrowRightIcon size={16} /></Button>
           </div>
         </Nav>
       </Navbar>
