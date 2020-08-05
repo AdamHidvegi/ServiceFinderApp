@@ -30,15 +30,15 @@ public class DataLoader implements ApplicationRunner {
     public void run(ApplicationArguments args) {
         // employee:
 
-        Employee employee1 = new Employee("Adam", "Hidvegi", "Glasgow", "hidvegiadam@gmail.com", "12345");
+        Employee employee1 = new Employee("Adam", "Hidvegi", "Glasgow", "hidvegiadam@gmail.com", "12345", "logged out");
         employeeRepo.save(employee1);
 
-        Employee employee2 = new Employee("Zoltan", "Rosta", "Budapest", "zoltanrosta@gmail.com", "1234");
+        Employee employee2 = new Employee("Zoltan", "Rosta", "Budapest", "zoltanrosta@gmail.com", "1234", "logged out");
         employeeRepo.save(employee2);
 
         //employer:
 
-        Employer employer1 = new Employer("Kincso", "Turai", "description", "skillset", "Glasgow", 5, "08/08/2020", "kincsoet@gmail.com", "1234");
+        Employer employer1 = new Employer("Kincso", "Turai", "description", "skillset", "Glasgow", 5, "08/08/2020", "kincsoet@gmail.com", "1234", "logged out");
         employerRepo.save(employer1);
 
         // job:

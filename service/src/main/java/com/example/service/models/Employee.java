@@ -29,16 +29,20 @@ public class Employee {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "status")
+    private String status;
+
     @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY)
     @JsonIgnoreProperties(value = "employee")
     private List<Job> jobs;
 
-    public Employee(String first_name, String last_name, String location, String email, String password) {
+    public Employee(String first_name, String last_name, String location, String email, String password, String status) {
         this.first_name = first_name;
         this.last_name = last_name;
 //        this.location = location;
         this.email = email;
         this.password = password;
+        this.status = status;
     }
 
     public Employee() {
@@ -46,6 +50,14 @@ public class Employee {
 
     public Long getId() {
         return Id;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getFirst_name() {

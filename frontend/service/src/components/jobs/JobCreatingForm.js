@@ -26,7 +26,7 @@ const JobCreatingForm = ({handleJobPost}) => {
           <input type="number" step="0.1" placeholder="Salary" name="salary"/>
           <input type="number" placeholder="Duration" name="duration"/>
           <input type="text" placeholder="Category" name="category"/>
-          <button type="submit">Register</button>
+          <button type="submit" value="submit">Register</button>
         </form>
       </div>
     </div>

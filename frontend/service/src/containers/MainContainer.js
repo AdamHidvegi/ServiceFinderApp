@@ -15,6 +15,31 @@ import Container from 'react-bootstrap/Container'
 
 export default function MainContainer() {
 
+  const [employees, setEmployees] = useState([])
+  const [employers, setEmployers] = useState([])
+
+  useEffect(() => {
+    const getEmployees = () => {
+      fetch('/api/employees')
+      .then(res => res.json())
+      .then(data => setEmployees(data._embedded.employees))
+    };
+    const getEmployers = () => {
+      fetch('/api/employers')
+      .then(res => res.json())
+      .then(data => setEmployers(data._embedded.employers))
+    };
+    getEmployees();
+    getEmployers();
+  }, []);
+
+  function findEmployeeById() {
+    const employee = employees.find((employee) => {
+      return employee.id === parseInt(id);
+    })
+    return employee;
+  }
+
   return(
     <Container fluid>
       <Router>
